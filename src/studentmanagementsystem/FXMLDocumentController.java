@@ -82,6 +82,9 @@ public class FXMLDocumentController implements Initializable {
                 if(result.next()){
 //                    THEN PROCEED TO DASHBOARD FORM
 
+                    getData.username = username.getText();
+
+
                     alert = new Alert(AlertType.INFORMATION);
                     alert.setTitle("Information Message");
                     alert.setHeaderText(null);

@@ -119,7 +119,7 @@
                <center>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <children>
-                        <AnchorPane fx:id="home_form" layoutX="77.0" layoutY="107.0" prefHeight="555.0" prefWidth="892.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="home_form" layoutX="77.0" layoutY="107.0" prefHeight="555.0" prefWidth="892.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <AnchorPane layoutX="11.0" layoutY="11.0" prefHeight="535.0" prefWidth="878.0" stylesheets="@dashboardDesign.css">
                                  <styleClass>
@@ -389,7 +389,7 @@
                               </AnchorPane>
                            </children>
                         </AnchorPane>
-                        <AnchorPane fx:id="studentGrade_form" layoutX="93.0" layoutY="178.0" prefHeight="555.0" prefWidth="892.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="studentGrade_form" layoutX="93.0" layoutY="178.0" prefHeight="555.0" prefWidth="892.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <AnchorPane layoutX="14.0" layoutY="11.0" prefHeight="533.0" prefWidth="273.0" stylesheets="@dashboardDesign.css">
                                  <styleClass>
@@ -427,8 +427,8 @@
                                           <Font name="Tahoma" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Button fx:id="studentGrade_updateBtn" layoutX="152.0" layoutY="270.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="93.0" styleClass="update-btn" stylesheets="@dashboardDesign.css" text="Update" />
-                                    <Button fx:id="studentGrade_clearBtn" layoutX="12.0" layoutY="270.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="93.0" styleClass="clear-btn" stylesheets="@dashboardDesign.css" text="Clear" />
+                                    <Button fx:id="studentGrade_updateBtn" layoutX="152.0" layoutY="270.0" mnemonicParsing="false" onAction="#studentGradesUpdate" prefHeight="44.0" prefWidth="93.0" styleClass="update-btn" stylesheets="@dashboardDesign.css" text="Update" />
+                                    <Button fx:id="studentGrade_clearBtn" layoutX="12.0" layoutY="270.0" mnemonicParsing="false" onAction="#studentGradesClear" prefHeight="44.0" prefWidth="93.0" styleClass="clear-btn" stylesheets="@dashboardDesign.css" text="Clear" />
                                  </children>
                               </AnchorPane>
                               <AnchorPane layoutX="298.0" layoutY="11.0" prefHeight="533.0" prefWidth="594.0" stylesheets="@dashboardDesign.css">
@@ -437,7 +437,7 @@
                                     <String fx:value="shadow" />
                                  </styleClass>
                                  <children>
-                                    <TableView fx:id="studentGrade_tableView" layoutX="11.0" layoutY="52.0" prefHeight="472.0" prefWidth="572.0">
+                                    <TableView fx:id="studentGrade_tableView" layoutX="11.0" layoutY="52.0" onMouseClicked="#studentGradesSelect" prefHeight="472.0" prefWidth="572.0">
                                       <columns>
                                         <TableColumn fx:id="studentGrade_col_studentNum" prefWidth="87.0" text="Student #" />
                                         <TableColumn fx:id="studentGrade_col_year" prefWidth="78.0" text="Year" />
@@ -447,7 +447,7 @@
                                           <TableColumn fx:id="studentGrade_col_final" prefWidth="109.0" text="Final" />
                                       </columns>
                                     </TableView>
-                                    <TextField fx:id="studentGrade_search" layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="270.0" promptText="Search" styleClass="search" stylesheets="@dashboardDesign.css" />
+                                    <TextField fx:id="studentGrade_search" layoutX="14.0" layoutY="14.0" onKeyTyped="#studentGradesSearch" prefHeight="30.0" prefWidth="270.0" promptText="Search" styleClass="search" stylesheets="@dashboardDesign.css" />
                                     <FontAwesomeIcon glyphName="SEARCH" layoutX="20.0" layoutY="35.0" size="1.5em" />
                                  </children>
                               </AnchorPane>

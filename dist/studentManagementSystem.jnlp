@@ -11,7 +11,7 @@
     <jar href="lib\fontawesomefx-8.2.jar" size="180341" download="eager" />
     <jar href="lib\mysql-connector-java-5.1.48.jar" size="1006956" download="eager" />
     <jar href="lib\ojdbc14-10.2.0.2.0.jar" size="1545954" download="eager" />
-    <jar href="studentManagementSystem.jar" size="147266" download="eager" />
+    <jar href="studentManagementSystem.jar" size="149639" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="studentManagementSystem" >
     <param name="requiredFXVersion" value="8.0+"/>
